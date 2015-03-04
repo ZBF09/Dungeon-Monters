@@ -19,7 +19,7 @@ package  {
 			this.y = 460;//platform y position
 		}
 		
-		public function movePlatform(){
+		/*public function movePlatform(){
 			//while platform is less then maxHeight
 			while(true){
 				if(this.y > maxHeight){
@@ -30,7 +30,7 @@ package  {
 					this.y += 2; //lower platform at a rate of 2
 				}
 			}//end infinite
-		}
+		}*/
 	}
 	
 }

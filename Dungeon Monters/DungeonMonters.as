@@ -36,14 +36,12 @@
 			//create player
 			player = new Player();
 			//add player to game on load
-			this.addChild(player);
+			this.addChildAt(player, 1);
 			
 			//create platform
 			platform = new Platform();
 			//add platform to game on load
-			this.addChild(platform);
-			//platform motion
-			platform.movePlatform();
+			this.addChildAt(platform, 1);
 			
 			//initialize all key registers to false
 			upKey = false;
@@ -65,6 +63,10 @@
 		public function controlGame(event:Event):void{
 			Mouse.hide(); //removes mouse cursor
 			
+			//platform motion
+			//platform.movePlatform();
+			
+			//control checks
 			if(upKey && leftKey){
 				//move player diagonally left
 				player.movePlayer(-1, -1);
@@ -85,6 +87,10 @@
 				//move player left
 				player.movePlayer(-1, 0);
 			}
+			else if(downKey == true){
+				//move player down
+				player.movePlayer(0, 1);
+			}
 			
 			//handle magic blast attack
 			/*if(spaceKey && blastDelay >= blastTime){
@@ -99,14 +105,19 @@
 				//adjust player position based on collision
 				if(rightKey == true){
 					player.movePlayer(-1, 0);
-					trace("hit");
+					trace("hit platform");
 				}
 				else if(leftKey == true){
 					player.movePlayer(1, 0);
-					trace("hit");
+					trace("hit platform");
 				}
 				else if(upKey == true){
+					player.movePlayer(0, 1);
+					trace("hit platform");
+				}
+				else if(downKey == true){
 					player.movePlayer(0, -1);
+					trace("hit platform");
 				}
 			}
 		}//end controlGame

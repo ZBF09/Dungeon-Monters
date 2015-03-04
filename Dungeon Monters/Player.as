@@ -27,7 +27,7 @@ package  {
 			jumpForce = 10
 			//magicType = "None";
 			this.x = 80; //character starting x position 
-			this.y = 520; //character starting y position
+			this.y = 510; //character starting y position
 		}
 		
 		//move player function
