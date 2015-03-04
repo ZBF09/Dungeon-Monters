@@ -42,6 +42,8 @@
 			platform = new Platform();
 			//add platform to game on load
 			this.addChild(platform);
+			//platform motion
+			platform.movePlatform();
 			
 			//initialize all key registers to false
 			upKey = false;

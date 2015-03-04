@@ -1,4 +1,5 @@
-﻿package  {
+﻿//Modified: 2/25/2015
+package  {
 	
 	import flash.display.MovieClip;
 	
@@ -25,8 +26,8 @@
 			speed = 10;
 			jumpForce = 10
 			//magicType = "None";
-			this.x = 10; //character starting x position 
-			this.y = 500; //character starting y position
+			this.x = 80; //character starting x position 
+			this.y = 520; //character starting y position
 		}
 		
 		//move player function
